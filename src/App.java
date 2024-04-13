@@ -27,8 +27,23 @@ public class App {
          * podemos
          * realizar operaciones básicas de manera creativa en programación.
          */
-        int resultado = dataStructuresPrep.subtractAlgorithm(15, 5);
+        boolean numeroPerfecto = dataStructuresPrep.isPerfectNumber(6);
+        int resultado = dataStructuresPrep.subtractAlgorithm(10, 5);
+        int resultadoMultiplicacion = dataStructuresPrep.multiplyAlgorithm(5, 5);
+        int resultadoDivison = dataStructuresPrep.divideWAlgorithm(10, 2);
+        int factorial = dataStructuresPrep.getFactorial(5);
+        int algoritmo = dataStructuresPrep.powerAlgorithm(2, 3);
+        boolean esprime = dataStructuresPrep.isPrime(10);
+        System.out.println("El numero :" + esprime);
+        if (esprime) {
+            System.out.println("es primo");
+        } else {
+            System.out.println("no es primo");
+        }
 
+        int numeros = dataStructuresPrep.countDigits(1235l);
+        int[] numerosmax = { 1, 5, 3, 6, 8, 2 };
+        int mayor = dataStructuresPrep.findMaximum(numerosmax);
         /*
          * Imprimir el resultado de la operación.
          * 
@@ -44,6 +59,16 @@ public class App {
          * parte de mensajes de salida o en lógicas de decisión más complejas.
          */
         System.out.println("El resultado de restar 15 - 5 sin usar el operador de resta es: " + resultado);
+
+        System.out.println("El resultado de multiplicar  15 * 5 sin usar el operador de la multiplicacion es: "
+                + resultadoMultiplicacion);
+        System.out.println("El resultado de dividir  15 / 5 sin usar el operador de divisor  es: "
+                + resultadoDivison);
+        System.out.println("El resultado de factorial " + factorial);
+        System.out.println("El algoritmo es : " + algoritmo);
+        System.out.println("La cantidad de dígitos en number. " + numeros);
+        System.out.println("El mayor es :" + mayor);
+        System.out.println("El numero es " + numeroPerfecto);
 
     }
 }

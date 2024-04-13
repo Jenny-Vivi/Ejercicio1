@@ -26,7 +26,12 @@ public class DataStructuresPrep {
      *         Ejemplo: subtractAlgorithm(5, 3) retorna 2.
      */
     public int subtractAlgorithm(int a, int b) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        int resultado = 0;
+        while (a > (b + resultado)) {
+            resultado = resultado + 1;
+        }
+        return resultado;
+
     }
 
     /**
@@ -38,7 +43,12 @@ public class DataStructuresPrep {
      *         Ejemplo: multiplyAlgorithm(5, 3) retorna 15.
      */
     public int multiplyAlgorithm(int a, int b) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        int resultado = 0;
+        for (int i = 0; i < b; i++) {
+            resultado += a;
+        }
+        return resultado;
+
     }
 
     /**
@@ -50,7 +60,15 @@ public class DataStructuresPrep {
      *         Ejemplo: divideWAlgorithm(10, 2) retorna 5.
      */
     public int divideWAlgorithm(int dividend, int divisor) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        int cont = 0;
+        int residuo = dividend;
+        while (residuo >= divisor) {
+            cont++;
+            residuo = residuo - divisor;
+
+        }
+        return cont;
+
     }
 
     /**
@@ -62,7 +80,24 @@ public class DataStructuresPrep {
      *         Ejemplo: isPerfectNumber(28) retorna true.
      */
     public boolean isPerfectNumber(int number) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        if (number <= 1) {
+            return false;
+        }
+
+        int sum = 1; // 1 is always a divisor and we start sum from 1
+        int sqrt = (int) Math.sqrt(number);
+
+        for (int i = 2; i <= sqrt; i++) {
+            if (number % i == 0) {
+                sum += i;
+                if (i != number / i) { // to avoid counting square root twice
+                    sum += number / i;
+                }
+            }
+        }
+
+        return sum == number;
+
     }
 
     /**
@@ -73,7 +108,13 @@ public class DataStructuresPrep {
      *         Ejemplo: getFactorial(5) retorna 120.
      */
     public int getFactorial(int number) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        int cont = 1;
+        for (int i = 2; i <= number; i++) {
+            cont *= i;
+
+        }
+        return cont;
+
     }
 
     /**
@@ -84,7 +125,15 @@ public class DataStructuresPrep {
      *         Ejemplo: findMaximum(new int[]{1, 5, 3, 6, 8, 2}) retorna 8.
      */
     public int findMaximum(int[] numbers) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        int aux = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (aux < numbers[i]) {
+                aux = numbers[i];
+            }
+
+        }
+        return aux;
+
     }
 
     /**
@@ -96,7 +145,15 @@ public class DataStructuresPrep {
      *         Ejemplo: powerAlgorithm(2, 3) retorna 8.
      */
     public int powerAlgorithm(int base, int exponent) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        if (exponent == 0) {
+            return 1;
+        }
+        int multi = 1;
+        for (int i = 0; i < exponent; i++) {
+            multi *= base;
+
+        }
+        return multi;
     }
 
     /**
@@ -107,17 +164,31 @@ public class DataStructuresPrep {
      *         Ejemplo: isPrime(5) retorna true.
      */
     public boolean isPrime(int number) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        boolean isPrime = true;
+        for (int i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
+                // isPrime=false;
+                return false;
+            }
+        }
+        return isPrime;
     }
 
     /**
      * Cuenta cuántos dígitos tiene un número.
      * 
      * @param number El número.
-     * @return La cantidad de dígitos en number.
+     * @return La cantidad de dígitos en number.La cantidad de dígitos en number.
      *         Ejemplo: countDigits(12345) retorna 5.
      */
-    public int countDigits(int number) {
-        throw new UnsupportedOperationException("Not yet implemented");
+    public int countDigits(long number) {
+        String salida = number + "";
+        return salida.length();
+
+    }
+
+    public int findMaximum(int i, int j, int k, int l, int m, int n) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findMaximum'");
     }
 }
