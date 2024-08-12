@@ -14,6 +14,8 @@
  * estudiantes
  * estarán mejor equipados para comprender cómo operan internamente las
  * estructuras de datos y cómo pueden manipularlas eficientemente.
+ * 
+ * SE REALIZO EN CLASES, HECHO POR VIVIANA CARCHI
  */
 public class DataStructuresPrep {
 

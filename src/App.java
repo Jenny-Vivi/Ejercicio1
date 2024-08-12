@@ -42,7 +42,7 @@ public class App {
         }
 
         int numeros = dataStructuresPrep.countDigits(1235l);
-        int[] numerosmax = { 1, 5, 3, 6, 8, 2 };
+        int[] numerosmax = { 3, 5, 3, 6, 8, 2 };
         int mayor = dataStructuresPrep.findMaximum(numerosmax);
         /*
          * Imprimir el resultado de la operación.
